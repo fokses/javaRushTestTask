@@ -8,7 +8,6 @@ import com.game.service.BadRequestException;
 import com.game.service.NotFoundException;
 import com.game.service.PlayerService;
 import com.game.service.PredicateTypes;
-import com.sun.istack.internal.NotNull;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.*;
@@ -223,7 +222,6 @@ class PlayerController {
         }
     }
 
-    @NotNull
     private static Specification<Player> getAlwaysTrueSpec() {
         return new Specification<Player>() {
             @Override
